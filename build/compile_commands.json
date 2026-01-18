@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/olek/Documents/test/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -IC:/Users/olek/Documents/test/. -IC:/Users/olek/Documents/test/cpp/bindings -IC:/Users/olek/Documents/test/cpp/classes -IC:/lua/include -std=gnu++17 -o CMakeFiles\\game.dir\\main.cpp.obj -c C:\\Users\\olek\\Documents\\test\\main.cpp",
+  "file": "C:/Users/olek/Documents/test/main.cpp",
+  "output": "C:/Users/olek/Documents/test/build/CMakeFiles/game.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/olek/Documents/test/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -IC:/Users/olek/Documents/test/. -IC:/Users/olek/Documents/test/cpp/bindings -IC:/Users/olek/Documents/test/cpp/classes -IC:/lua/include -std=gnu++17 -o CMakeFiles\\game.dir\\cpp\\classes\\Instance.cpp.obj -c C:\\Users\\olek\\Documents\\test\\cpp\\classes\\Instance.cpp",
+  "file": "C:/Users/olek/Documents/test/cpp/classes/Instance.cpp",
+  "output": "C:/Users/olek/Documents/test/build/CMakeFiles/game.dir/cpp/classes/Instance.cpp.obj"
+},
+{
+  "directory": "C:/Users/olek/Documents/test/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -IC:/Users/olek/Documents/test/. -IC:/Users/olek/Documents/test/cpp/bindings -IC:/Users/olek/Documents/test/cpp/classes -IC:/lua/include -std=gnu++17 -o CMakeFiles\\game.dir\\cpp\\bindings\\Instance.cpp.obj -c C:\\Users\\olek\\Documents\\test\\cpp\\bindings\\Instance.cpp",
+  "file": "C:/Users/olek/Documents/test/cpp/bindings/Instance.cpp",
+  "output": "C:/Users/olek/Documents/test/build/CMakeFiles/game.dir/cpp/bindings/Instance.cpp.obj"
+},
+{
+  "directory": "C:/Users/olek/Documents/test/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -IC:/Users/olek/Documents/test/. -IC:/Users/olek/Documents/test/cpp/bindings -IC:/Users/olek/Documents/test/cpp/classes -IC:/lua/include -std=gnu++17 -o CMakeFiles\\game.dir\\cpp\\bindings\\Vector3.cpp.obj -c C:\\Users\\olek\\Documents\\test\\cpp\\bindings\\Vector3.cpp",
+  "file": "C:/Users/olek/Documents/test/cpp/bindings/Vector3.cpp",
+  "output": "C:/Users/olek/Documents/test/build/CMakeFiles/game.dir/cpp/bindings/Vector3.cpp.obj"
+}
+]
