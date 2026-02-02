@@ -17,7 +17,7 @@ int main() {
     register_vector3(lua);
     register_instance(lua);
 
-   lua.script_file("luau/main.luau");
+   lua.script_file("../luau/main.luau");
   
 
     std::cout << "\nNaciśnij Enter aby zakończyć...\n";
