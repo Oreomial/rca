@@ -23,12 +23,21 @@ CPMAddPackage(
     GIT_TAG master
 )
 
+CPMAddPackage(
+    NAME raygui
+    GITHUB_REPOSITORY raysan5/raygui
+    GIT_TAG master
+)
+
+file(GLOB bindings "${workspace}/cpp/bindings/*.cpp")
+file(GLOB uis "${workspace}/engine/UIs/*.cpp")
 
 add_executable(game
     ${workspace}/main.cpp
+    ${workspace}/engine/mainEngine.cpp
 
-    ${workspace}/cpp/bindings/Instance.cpp
-    ${workspace}/cpp/bindings/Vector3.cpp
+    ${bindings}
+    ${uis}
 )
 
 target_include_directories(game PRIVATE
@@ -40,6 +49,10 @@ target_include_directories(game PRIVATE
 
 target_link_directories(game PRIVATE
     C:/lua
+)
+
+target_include_directories(game PRIVATE
+    ${raygui_SOURCE_DIR}/src
 )
 
 target_link_libraries(game
