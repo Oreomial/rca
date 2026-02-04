@@ -1,35 +1,32 @@
 #include "raylib.h"
 #include <engine/UIs/UI.h>
+#include "engine/mainEngine.h"
 
-void RenderCamera(Camera *camera, float *zoom, int sensivity) {
+void RenderCamera() {
     int mouseWheel = GetMouseWheelMove();
+    float delta = GetFrameTime();
 
-     if (mouseWheel != 0)
-        {
-            *zoom += mouseWheel;
-        }
     if(IsKeyDown(KEY_W)){
-        UpdateCameraPro(camera, (Vector3){0.1, 0, 0}, (Vector3){0, 0, 0}, *zoom);
+        UpdateCameraPro(&Engine::camera, (Vector3){Engine::cameraSpeed * delta, 0, 0}, (Vector3){0, 0, 0}, 0);
     }
     if(IsKeyDown(KEY_S)){
-        UpdateCameraPro(camera, (Vector3){-0.1, 0, 0}, (Vector3){0, 0, 0}, *zoom);
+        UpdateCameraPro(&Engine::camera, (Vector3){-Engine::cameraSpeed * delta, 0, 0}, (Vector3){0, 0, 0}, 0);
     }
     if(IsKeyDown(KEY_A)){
-        UpdateCameraPro(camera, (Vector3){0, -0.1, 0}, (Vector3){0, 0, 0}, *zoom);
+        UpdateCameraPro(&Engine::camera, (Vector3){0, -Engine::cameraSpeed * delta, 0}, (Vector3){0, 0, 0}, 0);
     }
     if(IsKeyDown(KEY_D)){
-        UpdateCameraPro(camera, (Vector3){0, 0.1, 0}, (Vector3){0, 0, 0}, *zoom);
+        UpdateCameraPro(&Engine::camera, (Vector3){0, Engine::cameraSpeed * delta, 0}, (Vector3){0, 0, 0}, 0);
     }
     if(IsKeyDown(KEY_E)){
-        UpdateCameraPro(camera, (Vector3){0, 0, 0.1}, (Vector3){0, 0, 0}, *zoom);
+        UpdateCameraPro(&Engine::camera, (Vector3){0, 0, Engine::cameraSpeed * delta}, (Vector3){0, 0, 0}, 0);
     }
     if(IsKeyDown(KEY_Q)){
-        UpdateCameraPro(camera, (Vector3){0, 0, -0.1}, (Vector3){0, 0, 0}, *zoom);
+        UpdateCameraPro(&Engine::camera, (Vector3){0, 0, -Engine::cameraSpeed * delta}, (Vector3){0, 0, 0}, 0);
     }
     if(IsMouseButtonDown(MOUSE_BUTTON_RIGHT)){
         Vector2 MouseDelta = GetMouseDelta();
-        float FrameDelta = GetFrameTime();
-        UpdateCameraPro(camera, (Vector3){0, 0, 0}, (Vector3){MouseDelta.x * sensivity * FrameDelta, MouseDelta.y * sensivity * FrameDelta, 0}, *zoom);
+        UpdateCameraPro(&Engine::camera, (Vector3){0, 0, 0}, (Vector3){MouseDelta.x * Engine::sensivity, MouseDelta.y * Engine::sensivity, 0}, 0);
     }
     if(IsMouseButtonPressed(MOUSE_BUTTON_RIGHT)) {
         DisableCursor();

@@ -3,5 +3,5 @@
 
 void RenderNoUI();
 void RenderMenu();
-void RenderCamera(Camera *camera, float *zoom, int sensivity);
+void RenderCamera();
 void RenderDebugUi();

@@ -30,14 +30,14 @@ CPMAddPackage(
 )
 
 file(GLOB bindings "${workspace}/cpp/bindings/*.cpp")
-file(GLOB uis "${workspace}/engine/UIs/*.cpp")
+file(GLOB engine "${workspace}/engine/**/*.cpp")
 
 add_executable(game
     ${workspace}/main.cpp
     ${workspace}/engine/mainEngine.cpp
 
     ${bindings}
-    ${uis}
+    ${engine}
 )
 
 target_include_directories(game PRIVATE
